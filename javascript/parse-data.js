@@ -3,6 +3,7 @@
 
   // creates a JavaScript object by parsing the JSON-formatted string from the file
   let obj = JSON.parse(jsonString);
+  console.log(obj);
 
   /*
     EXERCISE 01:
@@ -10,14 +11,23 @@
     (Note the ES6 'template literal' syntax):
   */
 
+  var theData = "";
 
-  for (var i = 0; i < 5; i++) {
+  for(var i = 0; i < 5; i++) {
     let theData =  `${obj.lecturers[i].firstName} ${obj.lecturers[i].lastName}`;
+    demoData.innerHTML = theData;
   }
 
 
+  // for (var i in obj) {
+  //   let theData =  `${obj.lecturers[i].firstName} ${obj.lecturers[i].lastName}`;
+  //   console.log(i);
+  // }
+
+
+
   // populates the chosen element's content with the data:
-  demoData.innerHTML = theData;
+
 
   /*
     EXERCISE 02:
